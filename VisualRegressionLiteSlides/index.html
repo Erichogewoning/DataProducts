@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visual Regression Lite</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visual Regression Lite">
+  <meta name="author" content="Eric Hogewoning">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visual Regression Lite</h1>
+    <h2></h2>
+    <p>Eric Hogewoning<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What is Visual Regression Lite?</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Visual Regression Lite is a tool that:</p>
+
+<ul>
+<li>was created in R using Shiny</li>
+<li>shows the predicted values of a regression model visually</li>
+<li>allows you to try out different model parameters in a GUI</li>
+<li>displays the (R-squared) variation explained by your model</li>
+<li>shows the (selected) parameter significance</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Save on writing code</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Sometimes you want to explore a lot of different linear models fast and see which predictors are significant and explain a lot of the variation. You are probably writing and changing a lot of code like the fit1, fit2, fit3 etc lines below.</p>
+
+<pre><code class="r">data(mtcars)
+fit1 &lt;- lm(mpg ~ am, data=mtcars)
+fit2 &lt;- lm(mpg ~ hp, data=mtcars)
+fit3 &lt;- lm(mpg ~ hp + wt, data=mtcars) # fit4, fit5, fit6 etc.
+summary(fit1)$coef
+summary(fit1)$r.squared
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Save on creating lots of plots</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Besided models, you are also making quite a few plots to figure out what&#39;s going on. With Visual Regression Lite you save on writing code and making plots and can now build your model visually and interactively.</p>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Try Visual Regression Lite right here</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Try it out below! or <a href="https://erich-ds.shinyapps.io/Shiny">Click here</a> to run it full screen.</p>
+
+<iframe width='800' height='580' src='https://erich-ds.shinyapps.io/Shiny' frameborder='0'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What is Visual Regression Lite?'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Save on writing code'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Save on creating lots of plots'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Try Visual Regression Lite right here'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
